@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bestow - Premium Customized Gifts & Mementos. Elevate Your Memories.">
+    <meta name="keywords" content="customized gifts, awards, keychains, caricatures, photo frames, Coimbatore">
+    <title>Bestow - Elevate Your Memories | Customized Gifts & Mementos</title>
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dnwqpvkq6/image/upload/q_auto/f_auto/v1781696384/Untitled_design_24_kyqbou.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dnwqpvkq6/image/upload/q_auto/f_auto/v1781696384/Untitled_design_24_kyqbou.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <!-- Preloader with Logo -->
+    <div id="preloader">
+        <div class="loader">
+            <img src="https://res.cloudinary.com/dnwqpvkq6/image/upload/q_auto/f_auto/v1781696384/Untitled_design_24_kyqbou.png" alt="Bestow" class="loader-logo">
+            <div class="loader-ring"></div>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div id="top-bar">
+        <div class="top-bar-inner">
+            <div class="tb-left">
+                <span><i class="fas fa-phone-alt"></i> +91 90254 59227</span>
+                <span><i class="fas fa-envelope"></i> bestow.cbe@gmail.com</span>
+                <span class="hide-sm"><i class="fas fa-map-marker-alt"></i> Coimbatore, Tamil Nadu</span>
+            </div>
+            <div class="tb-right">
+                <a href="https://instagram.com/bestow.cbe" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/919025459227" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar with Logo Image -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <img src="https://res.cloudinary.com/dnwqpvkq6/image/upload/q_auto/f_auto/v1781696384/Untitled_design_24_kyqbou.png" alt="Bestow - Elevate Your Memories" class="logo-img">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#tracking">Track Order</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="nav-search">
+                    <input type="text" id="searchInput" placeholder="Search gifts...">
+                    <button onclick="doSearch()" aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-cart" onclick="toggleCart()" role="button" aria-label="Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </div>
+                <button class="btn-cust-login" id="custLoginBtn" onclick="showAuth('customer')">
+                    <i class="fas fa-user"></i> <span class="btn-label">Login</span>
+                </button>
+                <button class="btn-admin-login" onclick="showAuth('admin')" aria-label="Admin Login">
+                    <i class="fas fa-user-shield"></i>
+                </button>
+                <div class="nav-burger" id="navBurger" onclick="toggleNav()">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg-particles" id="heroBgParticles"></div>
+        <div class="hero-gradient"></div>
+        <div class="hero-body">
+            <div class="hero-content-box">
+                <h1>
+                    <span class="h1-line1">Elevate Your</span>
+                    <span class="h1-line2">Memories</span>
+                </h1>
+                <p class="hero-desc">Handcrafted personalized gifts & mementos that capture your precious moments forever. Awards, keychains, caricatures, photo frames and more.</p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn-primary"><i class="fas fa-gift"></i> Shop Now</a>
+                    <a href="#categories" class="btn-ghost"><i class="fas fa-th-large"></i> Explore Categories</a>
+                </div>
+                <div class="hero-numbers">
+                    <div class="hn-item">
+                        <span class="hn-val" data-target="5000">0</span><span class="hn-plus">+</span>
+                        <span class="hn-label">Happy Customers</span>
+                    </div>
+                    <div class="hn-sep"></div>
+                    <div class="hn-item">
+                        <span class="hn-val" data-target="200">0</span><span class="hn-plus">+</span>
+                        <span class="hn-label">Products</span>
+                    </div>
+                    <div class="hn-sep"></div>
+                    <div class="hn-item">
+                        <div class="hn-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                        <span class="hn-label">4.8/5 Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-down"><a href="#highlights"><i class="fas fa-chevron-down"></i></a></div>
+    </section>
+
+    <!-- Highlights Strip -->
+    <section id="highlights" class="highlights-strip">
+        <div class="container">
+            <div class="hl-grid">
+                <div class="hl-item"><i class="fas fa-shipping-fast"></i><div><h4>Free Shipping</h4><p>On orders above ₹999</p></div></div>
+                <div class="hl-item"><i class="fas fa-paint-brush"></i><div><h4>Custom Designs</h4><p>100% Personalized</p></div></div>
+                <div class="hl-item"><i class="fas fa-undo-alt"></i><div><h4>Easy Returns</h4><p>7-day return policy</p></div></div>
+                <div class="hl-item"><i class="fas fa-headset"></i><div><h4>24/7 Support</h4><p>Dedicated help</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="sec-pad bg-off">
+        <div class="container">
+            <div class="sec-head">
+                <span class="sec-tag">Our Collections</span>
+                <h2>Browse by <span class="clr-red">Category</span></h2>
+                <p>Discover the perfect personalized gift for every occasion</p>
+            </div>
+            <div class="cat-grid">
+                <div class="cat-card" onclick="filterCat('awards')"><div class="cat-icon"><i class="fas fa-trophy"></i></div><h3>Awards</h3><p>Trophies & Recognitions</p></div>
+                <div class="cat-card" onclick="filterCat('keychains')"><div class="cat-icon"><i class="fas fa-key"></i></div><h3>Keychains</h3><p>Custom keychains</p></div>
+                <div class="cat-card" onclick="filterCat('fridge-magnets')"><div class="cat-icon"><i class="fas fa-magnet"></i></div><h3>Fridge Magnets</h3><p>Photo magnets</p></div>
+                <div class="cat-card" onclick="filterCat('photo-frames')"><div class="cat-icon"><i class="fas fa-image"></i></div><h3>Photo Frames</h3><p>Custom engraved frames</p></div>
+                <div class="cat-card" onclick="filterCat('badges')"><div class="cat-icon"><i class="fas fa-id-badge"></i></div><h3>Badges</h3><p>Custom printed badges</p></div>
+                <div class="cat-card" onclick="filterCat('name-boards')"><div class="cat-icon"><i class="fas fa-chalkboard"></i></div><h3>Name Boards</h3><p>Personalized boards</p></div>
+                <div class="cat-card" onclick="filterCat('caricatures')"><div class="cat-icon"><i class="fas fa-paint-brush"></i></div><h3>Caricatures</h3><p>Custom caricature art</p></div>
+                <div class="cat-card" onclick="filterCat('combo-gifts')"><div class="cat-icon"><i class="fas fa-gifts"></i></div><h3>Combo Gifts</h3><p>Gift hamper sets</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="sec-pad">
+        <div class="container">
+            <div class="sec-head">
+                <span class="sec-tag">Our Products</span>
+                <h2>Featured <span class="clr-red">Products</span></h2>
+                <p>Handpicked customized gifts crafted with love and precision</p>
+            </div>
+            <div class="filter-bar" id="filterBar">
+                <button class="fbtn active" data-cat="all">All</button>
+                <button class="fbtn" data-cat="awards">Awards</button>
+                <button class="fbtn" data-cat="keychains">Keychains</button>
+                <button class="fbtn" data-cat="fridge-magnets">Fridge Magnets</button>
+                <button class="fbtn" data-cat="photo-frames">Photo Frames</button>
+                <button class="fbtn" data-cat="badges">Badges</button>
+                <button class="fbtn" data-cat="name-boards">Name Boards</button>
+                <button class="fbtn" data-cat="caricatures">Caricatures</button>
+                <button class="fbtn" data-cat="combo-gifts">Combos</button>
+            </div>
+            <div class="prod-grid" id="prodGrid"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="sec-pad bg-off">
+        <div class="container">
+            <div class="about-wrap">
+                <div class="about-left">
+                    <div class="about-visual-box">
+                        <div class="about-visual-inner">
+                            <i class="fas fa-gift"></i>
+                            <h3>Bestow</h3>
+                            <p>Crafting Memories Since 2020</p>
+                        </div>
+                    </div>
+                    <div class="about-exp-badge"><span class="exp-num">4+</span><span class="exp-txt">Years of Excellence</span></div>
+                </div>
+                <div class="about-right">
+                    <span class="sec-tag">About Bestow</span>
+                    <h2>We Create <span class="clr-red">Personalized</span> Gifts That Last Forever</h2>
+                    <p>At Bestow, we believe every memory deserves to be preserved beautifully. Based in Coimbatore, we specialize in creating customized gifts and mementos from awards and keychains to caricatures and name boards.</p>
+                    <p>Every product is crafted with utmost care, premium materials, and attention to detail to ensure your gift stands out.</p>
+                    <div class="about-checks">
+                        <div class="about-chk"><i class="fas fa-check-circle"></i><span>Premium Quality Materials</span></div>
+                        <div class="about-chk"><i class="fas fa-check-circle"></i><span>100% Customizable</span></div>
+                        <div class="about-chk"><i class="fas fa-check-circle"></i><span>On-Time Delivery</span></div>
+                        <div class="about-chk"><i class="fas fa-check-circle"></i><span>Affordable Pricing</span></div>
+                    </div>
+                    <a href="#contact" class="btn-primary"><i class="fas fa-envelope"></i> Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="sec-pad bg-black">
+        <div class="container">
+            <div class="sec-head light">
+                <span class="sec-tag">Customer Love</span>
+                <h2>What Our <span class="clr-red">Customers</span> Say</h2>
+            </div>
+            <div class="rev-grid">
+                <div class="rev-card">
+                    <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"The custom award trophy I ordered was stunning! Perfect for our corporate event. Bestow delivers quality."</p>
+                    <div class="rev-author"><div class="rev-avatar">P</div><div><h4>Priya Sharma</h4><span>Verified Buyer</span></div></div>
+                </div>
+                <div class="rev-card">
+                    <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Ordered a caricature for my friend's birthday, it was hilarious and beautifully done! Will order again."</p>
+                    <div class="rev-author"><div class="rev-avatar">R</div><div><h4>Rajesh Kumar</h4><span>Verified Buyer</span></div></div>
+                </div>
+                <div class="rev-card">
+                    <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    <p>"The fridge magnets and keychains were perfect souvenirs for our family reunion. Great quality and fast delivery!"</p>
+                    <div class="rev-author"><div class="rev-avatar">A</div><div><h4>Anitha Devi</h4><span>Verified Buyer</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Tracking Section -->
+    <section id="tracking" class="sec-pad bg-off">
+        <div class="container">
+            <div class="sec-head">
+                <span class="sec-tag">Track Your Order</span>
+                <h2>Order <span class="clr-red">Tracking</span></h2>
+                <p>Enter your order ID to check current status</p>
+            </div>
+            <div class="track-box">
+                <div class="track-input-row">
+                    <input type="text" id="trackInput" placeholder="Enter Order ID (e.g., BST-001)">
+                    <button onclick="trackOrder()" class="btn-primary"><i class="fas fa-search"></i> Track</button>
+                </div>
+                <div id="trackResult" class="track-result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Big Logo Above -->
+    <section id="contact" class="sec-pad">
+        <div class="container">
+            <!-- BIG LOGO ABOVE CONTACT DETAILS -->
+            <div class="contact-logo-banner">
+                <img src="https://res.cloudinary.com/dnwqpvkq6/image/upload/q_auto/f_auto/v1781696384/Untitled_design_24_kyqbou.png" alt="Bestow - Elevate Your Memories" class="contact-banner-logo">
+            </div>
+
+            <div class="sec-head">
+                <span class="sec-tag">Get in Touch</span>
+                <h2>Contact <span class="clr-red">Us</span></h2>
+            </div>
+            <div class="contact-wrap">
+                <div class="contact-left">
+                    <div class="c-card"><i class="fas fa-phone-alt"></i><div><h4>Call Us</h4><p>+91 90254 59227</p></div></div>
+                    <div class="c-card"><i class="fas fa-envelope"></i><div><h4>Email Us</h4><p>bestow.cbe@gmail.com</p></div></div>
+                    <div class="c-card"><i class="fas fa-map-marker-alt"></i><div><h4>Visit Us</h4><p>Coimbatore, Tamil Nadu</p></div></div>
+                    <div class="c-card"><i class="fab fa-instagram"></i><div><h4>Instagram</h4><p>@bestow.cbe</p></div></div>
+                    <div class="c-socials">
+                        <a href="https://instagram.com/bestow.cbe" target="_blank" class="soc-btn ig"><i class="fab fa-instagram"></i> bestow.cbe</a>
+                        <a href="https://wa.me/919025459227" target="_blank" class="soc-btn wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form id="contactForm" onsubmit="sendContact(event)">
+                        <div class="f-row">
+                            <div class="f-group"><label>Full Name *</label><input type="text" required placeholder="Your name" maxlength="50"></div>
+                            <div class="f-group"><label>Phone Number *</label><input type="tel" required placeholder="10-digit mobile" maxlength="10"></div>
+                        </div>
+                        <div class="f-group"><label>Email Address *</label><input type="email" required placeholder="your@email.com" maxlength="100"></div>
+                        <div class="f-group"><label>Subject *</label><input type="text" required placeholder="How can we help?" maxlength="100"></div>
+                        <div class="f-group"><label>Message *</label><textarea required placeholder="Tell us about your requirements..." rows="4" maxlength="500"></textarea></div>
+                        <button type="submit" class="btn-primary btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-wrap">
+                <div class="f-brand">
+                    <div class="f-logo">
+                        <img src="https://res.cloudinary.com/dnwqpvkq6/image/upload/q_auto/f_auto/v1781696384/Untitled_design_24_kyqbou.png" alt="Bestow" class="footer-logo-img">
+                    </div>
+                    <p class="f-tagline">ELEVATE YOUR MEMORIES</p>
+                    <p>Crafting personalized gifts & mementos in Coimbatore. Awards, keychains, caricatures, photo frames and more.</p>
+                    <div class="f-social">
+                        <a href="https://instagram.com/bestow.cbe" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919025459227" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="f-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="f-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#tracking">Track Order</a></li>
+                        <li><a href="#" onclick="toast('Coming soon!');return false;">Return Policy</a></li>
+                        <li><a href="#" onclick="toast('Coming soon!');return false;">Privacy Policy</a></li>
+                        <li><a href="#" onclick="toast('Coming soon!');return false;">Terms</a></li>
+                        <li><a href="#" onclick="toast('Coming soon!');return false;">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="f-col">
+                    <h4>We Accept</h4>
+                    <div class="f-pay">
+                        <div class="pay-i"><i class="fab fa-cc-visa"></i></div>
+                        <div class="pay-i"><i class="fab fa-cc-mastercard"></i></div>
+                        <div class="pay-i"><i class="fab fa-google-pay"></i></div>
+                        <div class="pay-i upi-i"><i class="fas fa-mobile-alt"></i> UPI</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bot">
+                <p>&copy; 2024 Bestow. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart" style="color:#de2128"></i> in Coimbatore</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919025459227" target="_blank" class="wa-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Back to Top Button -->
+    <button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Cart Drawer -->
+    <div class="cart-dim" id="cartDim" onclick="toggleCart()"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-top">
+            <h3><i class="fas fa-shopping-cart"></i> Shopping Cart</h3>
+            <button onclick="toggleCart()" class="cart-x">&times;</button>
+        </div>
+        <div class="cart-body" id="cartBody">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-bot">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cartTotalVal">₹0</span>
+            </div>
+            <button onclick="startCheckout()" class="btn-primary btn-block"><i class="fas fa-credit-card"></i> Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Auth Modal (Login/Register/Admin) -->
+    <div class="overlay" id="authOverlay">
+        <div class="modal-box">
+            <button class="m-close" onclick="closeOv('authOverlay')">&times;</button>
+            <div id="custAuthArea">
+                <div class="m-head">
+                    <div class="m-icon"><i class="fas fa-user"></i></div>
+                    <h2 id="authH">Customer Login</h2>
+                    <p id="authP">Sign in to your account</p>
+                </div>
+                <div id="loginArea">
+                    <div class="f-group">
+                        <label>Email</label>
+                        <div class="inp-icon"><i class="fas fa-envelope"></i><input type="email" id="lEmail" placeholder="your@email.com" maxlength="100"></div>
+                    </div>
+                    <div class="f-group">
+                        <label>Password</label>
+                        <div class="inp-icon"><i class="fas fa-lock"></i><input type="password" id="lPass" placeholder="Password" maxlength="50"><button type="button" class="eye-btn" onclick="togEye('lPass',this)"><i class="fas fa-eye"></i></button></div>
+                    </div>
+                    <button onclick="custLogin()" class="btn-primary btn-block"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+                    <p class="auth-sw">No account? <a href="#" onclick="goRegister();return false;">Register</a></p>
+                </div>
+                <div id="regArea" style="display:none">
+                    <div class="f-group">
+                        <label>Full Name</label>
+                        <div class="inp-icon"><i class="fas fa-user"></i><input type="text" id="rName" placeholder="Your name" maxlength="50"></div>
+                    </div>
+                    <div class="f-group">
+                        <label>Email</label>
+                        <div class="inp-icon"><i class="fas fa-envelope"></i><input type="email" id="rEmail" placeholder="your@email.com" maxlength="100"></div>
+                    </div>
+                    <div class="f-group">
+                        <label>Phone</label>
+                        <div class="inp-icon"><i class="fas fa-phone"></i><input type="tel" id="rPhone" placeholder="10-digit mobile" maxlength="10"></div>
+                    </div>
+                    <div class="f-group">
+                        <label>Password</label>
+                        <div class="inp-icon"><i class="fas fa-lock"></i><input type="password" id="rPass" placeholder="Create password (min 6 chars)" maxlength="50"><button type="button" class="eye-btn" onclick="togEye('rPass',this)"><i class="fas fa-eye"></i></button></div>
+                    </div>
+                    <div class="f-group">
+                        <label>Address</label>
+                        <textarea id="rAddr" placeholder="Delivery address" rows="2" maxlength="200"></textarea>
+                    </div>
+                    <button onclick="custRegister()" class="btn-primary btn-block"><i class="fas fa-user-plus"></i> Create Account</button>
+                    <p class="auth-sw">Have an account? <a href="#" onclick="goLogin();return false;">Sign In</a></p>
+                </div>
+            </div>
+            <div id="admAuthArea" style="display:none">
+                <div class="m-head">
+                    <div class="m-icon adm"><i class="fas fa-user-shield"></i></div>
+                    <h2>Admin Login</h2>
+                    <p>Authorized personnel only</p>
+                </div>
+                <div class="f-group">
+                    <label>Username</label>
+                    <div class="inp-icon"><i class="fas fa-user-tie"></i><input type="text" id="aUser" placeholder="Username"></div>
+                </div>
+                <div class="f-group">
+                    <label>Password</label>
+                    <div class="inp-icon"><i class="fas fa-lock"></i><input type="password" id="aPass" placeholder="Password"><button type="button" class="eye-btn" onclick="togEye('aPass',this)"><i class="fas fa-eye"></i></button></div>
+                </div>
+                <div class="f-group">
+                    <label>Security Code</label>
+                    <div class="inp-icon"><i class="fas fa-key"></i><input type="password" id="aCode" placeholder="Security code"></div>
+                </div>
+                <button onclick="admLogin()" class="btn-primary btn-block"><i class="fas fa-sign-in-alt"></i> Access Dashboard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div class="overlay" id="prodOverlay">
+        <div class="modal-box modal-wide">
+            <button class="m-close" onclick="closeOv('prodOverlay')">&times;</button>
+            <div id="prodDetailArea"></div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="overlay" id="checkOverlay">
+        <div class="modal-box modal-wide">
+            <button class="m-close" onclick="closeOv('checkOverlay')">&times;</button>
+            <div id="checkContent"></div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard Modal -->
+    <div class="overlay" id="adminOverlay">
+        <div class="modal-box modal-full">
+            <div class="adm-top">
+                <div class="adm-top-l">
+                    <h2><i class="fas fa-tachometer-alt"></i> Admin Dashboard</h2>
+                    <span id="admWelcome">Welcome, Admin</span>
+                </div>
+                <button class="btn-logout" onclick="closeOv('adminOverlay');toast('Logged out')"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+            <div class="adm-layout">
+                <div class="adm-side">
+                    <button class="adm-nav active" onclick="admTab('overview',this)"><i class="fas fa-chart-bar"></i><span>Overview</span></button>
+                    <button class="adm-nav" onclick="admTab('a-products',this)"><i class="fas fa-box"></i><span>Products</span></button>
+                    <button class="adm-nav" onclick="admTab('a-orders',this)"><i class="fas fa-shopping-bag"></i><span>Orders</span></button>
+                    <button class="adm-nav" onclick="admTab('a-customers',this)"><i class="fas fa-users"></i><span>Customers</span></button>
+                    <button class="adm-nav" onclick="admTab('a-analytics',this)"><i class="fas fa-chart-line"></i><span>Analytics</span></button>
+                </div>
+                <div class="adm-main">
+                    <!-- Overview Tab -->
+                    <div class="adm-pane active" id="pane-overview">
+                        <h3>Dashboard Overview</h3>
+                        <div class="ds-grid">
+                            <div class="ds-card c1"><div class="ds-icon"><i class="fas fa-rupee-sign"></i></div><div><h4>Revenue</h4><p id="dsRev">₹0</p></div></div>
+                            <div class="ds-card c2"><div class="ds-icon"><i class="fas fa-shopping-bag"></i></div><div><h4>Orders</h4><p id="dsOrd">0</p></div></div>
+                            <div class="ds-card c3"><div class="ds-icon"><i class="fas fa-box"></i></div><div><h4>Products</h4><p id="dsProd">0</p></div></div>
+                            <div class="ds-card c4"><div class="ds-icon"><i class="fas fa-users"></i></div><div><h4>Customers</h4><p id="dsCust">0</p></div></div>
+                        </div>
+                        <h4 class="mt20">Recent Orders</h4>
+                        <div class="tbl-w">
+                            <table class="adm-tbl">
+                                <thead><tr><th>Order ID</th><th>Customer</th><th>Amount</th><th>Payment</th><th>Status</th><th>Date</th></tr></thead>
+                                <tbody id="recentOrdTb"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Products Tab -->
+                    <div class="adm-pane" id="pane-a-products">
+                        <div class="pane-hdr">
+                            <h3>Product Management</h3>
+                            <button onclick="showProdForm()" class="btn-primary"><i class="fas fa-plus"></i> Add Product</button>
+                        </div>
+                        <div id="prodFormBox" class="form-box" style="display:none">
+                            <h4 id="pfTitle">Add New Product</h4>
+                            <form id="prodForm" onsubmit="saveProd(event)">
+                                <input type="hidden" id="pfId">
+                                <div class="f-row">
+                                    <div class="f-group"><label>Name *</label><input type="text" id="pfName" required></div>
+                                    <div class="f-group">
+                                        <label>Category *</label>
+                                        <select id="pfCat" required>
+                                            <option value="">Select</option>
+                                            <option value="awards">Awards</option>
+                                            <option value="keychains">Keychains</option>
+                                            <option value="fridge-magnets">Fridge Magnets</option>
+                                            <option value="photo-frames">Photo Frames</option>
+                                            <option value="badges">Badges</option>
+                                            <option value="name-boards">Name Boards</option>
+                                            <option value="caricatures">Caricatures</option>
+                                            <option value="combo-gifts">Combo Gifts</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="f-row">
+                                    <div class="f-group"><label>Price (₹) *</label><input type="number" id="pfPrice" required min="1"></div>
+                                    <div class="f-group"><label>Original Price (₹)</label><input type="number" id="pfOrig" min="1"></div>
+                                </div>
+                                <div class="f-group"><label>Description *</label><textarea id="pfDesc" required rows="3"></textarea></div>
+                                <div class="f-group"><label>Image URL</label><input type="url" id="pfImg" placeholder="https://..."></div>
+                                <div class="f-row">
+                                    <div class="f-group"><label>Stock</label><input type="number" id="pfStock" value="10" min="0"></div>
+                                    <div class="f-group"><label>Rating</label><input type="number" id="pfRate" value="4.5" min="1" max="5" step="0.1"></div>
+                                </div>
+                                <div class="f-group cb-row">
+                                    <label class="cbl"><input type="checkbox" id="pfFeat"> Featured</label>
+                                    <label class="cbl"><input type="checkbox" id="pfBest"> Bestseller</label>
+                                    <label class="cbl"><input type="checkbox" id="pfNew"> New</label>
+                                </div>
+                                <div class="f-actions">
+                                    <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Save</button>
+                                    <button type="button" onclick="hideProdForm()" class="btn-outline-dk">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tbl-w">
+                            <table class="adm-tbl">
+                                <thead><tr><th>Image</th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Actions</th></tr></thead>
+                                <tbody id="admProdTb"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Orders Tab -->
+                    <div class="adm-pane" id="pane-a-orders">
+                        <h3>Order Management</h3>
+                        <div class="ord-filt-bar" id="ordFiltBar">
+                            <button class="fbtn active" onclick="admOrdFilt('all',this)">All</button>
+                            <button class="fbtn" onclick="admOrdFilt('pending',this)">Pending</button>
+                            <button class="fbtn" onclick="admOrdFilt('confirmed',this)">Confirmed</button>
+                            <button class="fbtn" onclick="admOrdFilt('processing',this)">Processing</button>
+                            <button class="fbtn" onclick="admOrdFilt('shipped',this)">Shipped</button>
+                            <button class="fbtn" onclick="admOrdFilt('delivered',this)">Delivered</button>
+                        </div>
+                        <div class="tbl-w">
+                            <table class="adm-tbl">
+                                <thead><tr><th>Order ID</th><th>Customer</th><th>Items</th><th>Amount</th><th>Payment</th><th>Status</th><th>Date</th><th>Update</th></tr></thead>
+                                <tbody id="admOrdTb"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Customers Tab -->
+                    <div class="adm-pane" id="pane-a-customers">
+                        <h3>Customer Management</h3>
+                        <div class="tbl-w">
+                            <table class="adm-tbl">
+                                <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Orders</th><th>Spent</th><th>Joined</th></tr></thead>
+                                <tbody id="admCustTb"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Analytics Tab -->
+                    <div class="adm-pane" id="pane-a-analytics">
+                        <h3>Analytics</h3>
+                        <div class="ana-grid">
+                            <div class="ana-card"><h4>Sales by Category</h4><div id="anaCatBars"></div></div>
+                            <div class="ana-card"><h4>Order Status</h4><div id="anaStatus"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastEl" class="toast-el">
+        <div class="toast-inner">
+            <i class="toast-ic fas fa-check-circle"></i>
+            <span class="toast-tx">Done!</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
